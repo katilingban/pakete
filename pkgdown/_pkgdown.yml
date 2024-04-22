@@ -19,6 +19,9 @@ navbar:
     right: [mastodon, linkedin, github]
 
   components:
+    intro:
+      text: "Why paketa?"
+      href: articles/pakete .html
     # articles:
     #   text: Articles
     #   menu:
