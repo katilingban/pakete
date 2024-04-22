@@ -20,8 +20,8 @@ navbar:
 
   components:
     intro:
-      text: "Why paketa?"
-      href: articles/pakete .html
+      text: "Why pakete?"
+      href: articles/pakete.html
     # articles:
     #   text: Articles
     #   menu:
