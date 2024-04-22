@@ -2,7 +2,9 @@
 % Please edit documentation in R/add_badge.R
 \name{add_badge_status}
 \alias{add_badge_status}
-\title{Add repostatus badge}
+\alias{add_badge_codefactor}
+\alias{add_zenodo_badge}
+\title{Add badges to README}
 \usage{
 add_badge_status(
   status = c("concept", "wip", "suspended", "abandoned", "active", "inactive",
@@ -10,6 +12,10 @@ add_badge_status(
   path = NULL,
   .url = NULL
 )
+
+add_badge_codefactor(repo = NULL, path = NULL)
+
+add_zenodo_badge(repo = NULL, path = NULL)
 }
 \arguments{
 \item{status}{A character value for status to be assigned to project. This
@@ -22,18 +28,22 @@ project is the target file.}
 
 \item{.url}{If `status` is "moved", the URL to which the repository has moved
 to. Otherwise NULL.}
+
+\item{repo}{Short remote git repository name. If NULL, is determined based
+on current git settings.}
 }
 \value{
 An entry to the badge section of the README of the repository.
   Otherwise, a print of the markdown text for the status badge.
 }
 \description{
-Add repostatus badge
+Add badges to README
 }
 \examples{
-add_badge_status(
-  "wip",
-  path = system.file("examples", "README.Rmd", package = "pakete")
-)
+if (FALSE) {
+  add_badge_status("wip")
+  add_badge_codefactor(repo = "katilingban/pakete")
+  add_badge_zenodo(repo = "katilingban/pakete")
+}
 
 }

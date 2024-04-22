@@ -13,8 +13,9 @@ Description: Tools and utilities for package development currently not
    and repetitive tasks easily implementable.
 License: GPL (>= 3)
 Imports: 
-    stringr
+    jsonlite,
+    stringr,
+    withr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
-
