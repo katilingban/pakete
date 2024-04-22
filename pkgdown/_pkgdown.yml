@@ -1,0 +1,56 @@
+title: pakete
+
+url: https://katilingban.io/pakete/
+
+template:
+  bootstrap: 5
+  bootswatch: sandstone
+  theme: haddock
+  ganalytics: #
+
+home:
+  links:
+  - text: Learn more about Katilingban
+    href: https://katilingban.io
+
+navbar:
+  bg: primary
+  type: light
+  structure:
+    left:  [home, intro, reference, articles, news]
+    right: [mastodon, linkedin, github]
+
+  components:
+    # articles:
+    #   text: Articles
+    #   menu:
+    #   - text: "Africa CDC"
+    #     href: articles/africa-cdc.html
+    #   - text: "World Bank"
+    #     href: articles/world-bank.html
+    #   - text: "UNICEF"
+    #     href: articles/unicef.html
+    #   - text: "NHS"
+    #     href: articles/nhs.html
+    mastodon:
+      icon: "fab fa-mastodon fa-lg"
+      href: https://fosstodon.org/@katilingban
+    linkedin:
+      icon: "fab fa-linkedin fa-lg"
+      href: https://www.linkedin.com/company/katilingban
+
+reference:
+  - title: Badges and logo
+    contents:
+    - add_badge_status
+    - add_badge_codefactor
+    - add_badge_zenodo
+    - add_logo
+
+  - title: Document templates
+    contents:
+    - add_contributing
+
+  - title: Issues templates
+    contents:
+    - add_issues_template

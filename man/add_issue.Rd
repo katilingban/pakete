@@ -15,7 +15,7 @@ are \emph{"initial-cran-release"}, \emph{"update-cran-release"},
 ".github/ISSUE_TEMPLATE" which is the default location specified by
 GitHub.}
 
-\item{overwrite}{Logical. If an exising issue template with the same file
+\item{overwrite}{Logical. If an existing issue template with the same file
 name is found, should it be overwritten? Default to FALSE.}
 }
 \value{

@@ -96,7 +96,7 @@ This will create a `CONTRIBUTING.md` file within the `.github` directory
 (this will be created if it doesn’t exist). Do note that the
 contributing process described in this markdown document is the
 preferred process of those who developed the `pakete` package. If you
-are starting out and need something to use or somethign to build on,
+are starting out and need something to use or something to build on,
 then this can help.
 
 ### Adding a `repostatus` badge
