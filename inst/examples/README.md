@@ -4,13 +4,6 @@
 # pakete: Utilities for Package Development
 
 <!-- badges: start -->
-
-[![Project Status: WIP – Initial development is in progress, but there
-has not yet been a stable, usable release suitable for the
-public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CodeFactor](https://www.codefactor.io/repository/github/katilingban/pakete/badge)](https://www.codefactor.io/repository/github/katilingban/pakete)
 <!-- badges: end -->
 
 Tools and utilities for package development currently not available from
@@ -29,11 +22,7 @@ Currently, `pakete` includes functions for:
 
 3.  creating line snippets for `DESCRIPTION` file;
 
-4.  creating `CONTRIBUTING.md` file;
-
-5.  adding `repostatus` badge;
-
-## Installation·
+## Installation
 
 You can install `pakete` via the [Katilingban
 R-universe](https://katilingban.r-universe.dev) as follows:

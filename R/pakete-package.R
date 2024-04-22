@@ -7,5 +7,6 @@
 #' @docType package
 #' @keywords internal
 #' @name pakete
+#' @importFrom stringr str_detect str_replace_all
 #'
 "_PACKAGE"
