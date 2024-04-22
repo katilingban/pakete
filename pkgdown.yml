@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.0.9
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-04-22T18:17Z
+last_built: 2024-04-22T20:26Z
 urls:
   reference: https://katilingban.io/pakete/reference
   article: https://katilingban.io/pakete/articles
