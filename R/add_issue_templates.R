@@ -7,7 +7,7 @@
 #' @param path Path to file to add issue template into. Set to
 #'   ".github/ISSUE_TEMPLATE" which is the default location specified by
 #'   GitHub.
-#' @param overwrite Logical. If an exising issue template with the same file
+#' @param overwrite Logical. If an existing issue template with the same file
 #'   name is found, should it be overwritten? Default to FALSE.
 #'
 #' @returns A specified issue template markdown file in the specified `path`.
