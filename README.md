@@ -35,7 +35,7 @@ Currently, `pakete` includes functions for:
 
 5.  adding `repostatus` badge;
 
-## Installation·
+## Installation
 
 You can install `pakete` via the [Katilingban
 R-universe](https://katilingban.r-universe.dev) as follows:
@@ -50,6 +50,27 @@ install.packages(
 ## Usage
 
 ## Citation
+
+If you find the `pakete` package useful please cite using the suggested
+citation provided by a call to the `citation()` function as follows:
+
+``` r
+citation("pakete")
+#> To cite pakete in publications use:
+#> 
+#>   Ernest Guevarra (2024). _pakete: Utilities for Package Development_.
+#>   R package version 0.0.9000, <https://katilingban.io/pakete/>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {pakete: Utilities for Package Development},
+#>     author = {{Ernest Guevarra}},
+#>     year = {2024},
+#>     note = {R package version 0.0.9000},
+#>     url = {https://katilingban.io/pakete/},
+#>   }
+```
 
 ## Community guidelines
 

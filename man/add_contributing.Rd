@@ -2,7 +2,7 @@
 % Please edit documentation in R/add_contributing.R
 \name{add_contributing}
 \alias{add_contributing}
-\title{Add contributing document}
+\title{Add contributing markdown}
 \usage{
 add_contributing(repo = NULL)
 }
@@ -14,7 +14,7 @@ on current git settings.}
 A CONTRIBUTING.md file in the `.github` directory
 }
 \description{
-Add contributing document
+Add contributing markdown
 }
 \examples{
 if (interactive()) add_contributing("katilingban/pakete")
