@@ -2,16 +2,14 @@ title: pakete
 
 url: https://katilingban.io/pakete/
 
+development:
+  mode: auto
+
 template:
   bootstrap: 5
   bootswatch: sandstone
   theme: haddock
   ganalytics: #
-
-home:
-  links:
-  - text: Learn more about Katilingban
-    href: https://katilingban.io
 
 navbar:
   bg: primary
@@ -38,6 +36,11 @@ navbar:
     linkedin:
       icon: "fab fa-linkedin fa-lg"
       href: https://www.linkedin.com/company/katilingban
+
+home:
+  links:
+  - text: Learn more about Katilingban
+    href: https://katilingban.io
 
 reference:
   - title: Badges and logo
