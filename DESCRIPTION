@@ -1,0 +1,17 @@
+Package: pakete
+Type: Package
+Title: Utilities for Package Development
+Version: 0.0.0.9000
+Authors@R: person(given = "Ernest", 
+                  family = "Guevarra", 
+                  comment = c(ORCID = "0000-0002-4887-4415"), 
+                  email = "ernest@guevarra.io", 
+                  role = c("aut", "cre"))
+Description: Tools and utilities for package development currently not
+   available from usual development tools. These are mostly linked to personal
+   preferences during the development process. They assist in making routine
+   and repetitive tasks easily implementable.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
