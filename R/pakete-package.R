@@ -8,5 +8,6 @@
 #' @keywords internal
 #' @name pakete
 #' @importFrom stringr str_detect str_replace_all
+#' @importFrom jsonlite fromJSON
 #'
 "_PACKAGE"
