@@ -12,6 +12,7 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml)
 [![test-coverage](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml)
+[![codecov](https://codecov.io/gh/katilingban/pakete/graph/badge.svg?token=X6P9OW7XFL)](https://codecov.io/gh/katilingban/pakete)
 [![CodeFactor](https://www.codefactor.io/repository/github/katilingban/pakete/badge)](https://www.codefactor.io/repository/github/katilingban/pakete)
 [![DOI](https://zenodo.org/badge/790010725.svg)](https://zenodo.org/badge/latestdoi/790010725)
 <!-- badges: end -->
