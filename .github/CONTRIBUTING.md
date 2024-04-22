@@ -2,7 +2,7 @@
 
 ## Bugs
 
-* Submit an issue on the [issues page](https://github.com/{{repo}}/issues)
+* Submit an issue on the [issues page](https://github.com/katilingban/pakete/issues)
 
 ## Code contributions
 
@@ -11,14 +11,14 @@
 * Clone your version on your account down to your machine from your account 
 
 ```
-git clone https://github.com/<yourgithubusername>/{{repo_name}}.git
+git clone https://github.com/<yourgithubusername>/pakete.git
 ```
 
-* Make sure to track progress upstream i.e., on our version of `{{repo_name}}` 
-at `{{repo}}`, by doing 
+* Make sure to track progress upstream i.e., on our version of `pakete` 
+at `katilingban/pakete`, by doing 
 
 ```
-git remote add upstream https://github.com/{{repo}}.git
+git remote add upstream https://github.com/katilingban/pakete.git
 ```
 
 * Before making changes make sure to pull changes in from `upstream` by doing 
@@ -32,4 +32,4 @@ documentation
 
 * Push up changes to your account
 
-* Submit a pull request at `{{repo}}`
+* Submit a pull request at `katilingban/pakete`

@@ -2,6 +2,7 @@
 
 export(add_badge_codefactor)
 export(add_badge_status)
+export(add_contributing)
 export(add_logo)
 export(add_zenodo_badge)
 importFrom(jsonlite,fromJSON)
