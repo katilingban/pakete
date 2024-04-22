@@ -12,7 +12,7 @@ on current git settings.}
 }
 \value{
 An entry to the first level header section of the README of the
-  repository.
+repository.
 }
 \description{
 Add HTML snippet for package hex sticker in README

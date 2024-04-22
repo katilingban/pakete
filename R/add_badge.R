@@ -151,7 +151,7 @@ add_badge_codefactor <- function(repo = NULL,
 #' @export
 #'
 
-add_zenodo_badge <- function(repo = NULL,
+add_badge_zenodo <- function(repo = NULL,
                              path = NULL) {
   ## Determine repo ----
   if (is.null(repo))

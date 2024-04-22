@@ -9,6 +9,8 @@ usual development tools. These are mostly linked to personal preferences
 during the development process. They assist in making routine and repetitive
 tasks easily implementable.}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Tools and utilities for package development currently not available from usual development tools. These are mostly linked to personal preferences during the development process. They assist in making routine and repetitive tasks easily implementable.
 }
 \author{

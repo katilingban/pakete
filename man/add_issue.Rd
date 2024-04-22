@@ -8,8 +8,8 @@ add_issue_template(issue, path = ".github/ISSUE_TEMPLATE", overwrite = FALSE)
 }
 \arguments{
 \item{issue}{A character value of type of issue template to create. Choices
-are *"initial-cran-release"*, *"update-cran-release"*,
-*"submission-cran"*, and *"acceptance-cran"*.}
+are \emph{"initial-cran-release"}, \emph{"update-cran-release"},
+\emph{"submission-cran"}, and \emph{"acceptance-cran"}.}
 
 \item{path}{Path to file to add issue template into. Set to
 ".github/ISSUE_TEMPLATE" which is the default location specified by
@@ -19,7 +19,7 @@ GitHub.}
 name is found, should it be overwritten? Default to FALSE.}
 }
 \value{
-A specified issue template markdown file in the specified `path`.
+A specified issue template markdown file in the specified \code{path}.
 }
 \description{
 Add issue templates

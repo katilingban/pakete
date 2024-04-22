@@ -3,7 +3,7 @@
 \name{add_badge_status}
 \alias{add_badge_status}
 \alias{add_badge_codefactor}
-\alias{add_zenodo_badge}
+\alias{add_badge_zenodo}
 \title{Add badges to README}
 \usage{
 add_badge_status(
@@ -15,18 +15,18 @@ add_badge_status(
 
 add_badge_codefactor(repo = NULL, path = NULL)
 
-add_zenodo_badge(repo = NULL, path = NULL)
+add_badge_zenodo(repo = NULL, path = NULL)
 }
 \arguments{
 \item{status}{A character value for status to be assigned to project. This
-can be either *"concept"*, *"wip"*, *"suspended"*, *"abandoned"*,
-*"active"*, *"inactive"*, *"unsupported"*, or *"moved"*.}
+can be either \emph{"concept"}, \emph{"wip"}, \emph{"suspended"}, \emph{"abandoned"},
+\emph{"active"}, \emph{"inactive"}, \emph{"unsupported"}, or \emph{"moved"}.}
 
 \item{path}{Path to file to add repostatus badge to. Set to NULL by default
 which would indicate that a README file in the root directory of the
 project is the target file.}
 
-\item{.url}{If `status` is "moved", the URL to which the repository has moved
+\item{.url}{If \code{status} is "moved", the URL to which the repository has moved
 to. Otherwise NULL.}
 
 \item{repo}{Short remote git repository name. If NULL, is determined based
@@ -34,7 +34,7 @@ on current git settings.}
 }
 \value{
 An entry to the badge section of the README of the repository.
-  Otherwise, a print of the markdown text for the status badge.
+Otherwise, a print of the markdown text for the status badge.
 }
 \description{
 Add badges to README

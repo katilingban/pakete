@@ -11,7 +11,7 @@ add_contributing(repo = NULL)
 on current git settings.}
 }
 \value{
-A CONTRIBUTING.md file in the `.github` directory
+A CONTRIBUTING.md file in the \code{.github} directory
 }
 \description{
 Add contributing markdown
