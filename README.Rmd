@@ -33,11 +33,11 @@ Currently, `pakete` includes functions for:
 
 2. creating `_pkgdown.yml` templates for projects that I work on;
 
-3. creating line snippets for `DESCRIPTION` file;
+3. creating `CONTRIBUTING.md` file;
 
-4. creating `CONTRIBUTING.md` file;
+4. adding `repostatus` badge; and,
 
-5. adding `repostatus` badge;
+5. adding Zenodo DOI badge.
 
 ## Installation
 
