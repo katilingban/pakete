@@ -13,6 +13,14 @@ tasks easily implementable.}
 
 Tools and utilities for package development currently not available from usual development tools. These are mostly linked to personal preferences during the development process. They assist in making routine and repetitive tasks easily implementable.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://katilingban.io/pakete/}
+  \item \url{https://github.com/katilingban/pakete}
+}
+
+}
 \author{
 \strong{Maintainer}: Ernest Guevarra \email{ernest@guevarra.io} (\href{https://orcid.org/0000-0002-4887-4415}{ORCID})
 
