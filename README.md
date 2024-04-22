@@ -11,6 +11,7 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml)
+[![test-coverage](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml)
 [![CodeFactor](https://www.codefactor.io/repository/github/katilingban/pakete/badge)](https://www.codefactor.io/repository/github/katilingban/pakete)
 [![DOI](https://zenodo.org/badge/790010725.svg)](https://zenodo.org/badge/latestdoi/790010725)
 <!-- badges: end -->
@@ -50,10 +51,11 @@ install.packages(
 ### Creating GitHub issues checklist template for CRAN submissions
 
 It is useful for some to have a checklist of tasks to be done as part of
-the CRAN submission process. The [*Releasing to CRAN*
-chapter](https://r-pkgs.org/release.html) of second edition of the R
-packages book provides good templates for tasks to do for an [initial
-CRAN release](https://r-pkgs.org/release.html#sec-release-initial), an
+the CRAN submission process. The [*Releasing to
+CRAN*](https://r-pkgs.org/release.html) chapter of the second edition of
+the R packages book provides good templates for tasks to do for an
+[initial CRAN
+release](https://r-pkgs.org/release.html#sec-release-initial), an
 [update CRAN
 release](https://r-pkgs.org/release.html#keeping-up-with-change), a
 [submission of package to

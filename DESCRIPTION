@@ -17,10 +17,13 @@ Imports:
     stringr,
     withr
 Suggests: 
-    spelling    
+    knitr,
+    rmarkdown,
+    spelling
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
 RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
-URL: http://katilingban.io/pakete/
+URL: https://katilingban.io/pakete/, https://github.com/katilingban/pakete
+VignetteBuilder: knitr
