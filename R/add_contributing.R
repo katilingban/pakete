@@ -32,8 +32,8 @@ add_contributing <- function(repo = NULL) {
       pattern = "\\{\\{repo_name\\}\\}", replacement = repo_name
     )
 
-  sink(file = ".github/CONTRIBUTING.md")
-  sink()
-
-  writeLines(text = contrib_lines, con = ".github/CONTRIBUTING.md")
+  withr::with_output_sink(
+    new = ".github/CONTRIBUTING.md",
+    code = writeLines(text = contrib_lines, con = ".github/CONTRIBUTING.md")
+  )
 }

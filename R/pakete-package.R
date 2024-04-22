@@ -9,5 +9,6 @@
 #' @name pakete
 #' @importFrom stringr str_detect str_replace_all
 #' @importFrom jsonlite fromJSON
+#' @importFrom withr with_output_sink
 #'
 "_PACKAGE"
