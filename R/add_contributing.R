@@ -1,5 +1,5 @@
 #'
-#' Add contributing document
+#' Add contributing markdown
 #'
 #' @param repo Short remote git repository name. If NULL, is determined based
 #'   on current git settings.
