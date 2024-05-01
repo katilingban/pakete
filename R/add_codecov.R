@@ -12,9 +12,20 @@
 
 add_codecov <- function() {
   if (!file.exists("codecov.yml"))
-    return(FALSE)
+    return (FALSE)
 
   codecov_lines <- readLines("codecov.yml")
+
+  if (
+    any(
+      stringr::str_detect(
+        string = codecov_lines, pattern = "token", negate = TRUE
+      )
+    )
+  )
+    return (FALSE)
+
+
   codecov_lines <- c(
     "codecov:",
     "  token: ${{ secrets.CODECOV_TOKEN }}",
