@@ -54,6 +54,7 @@ reference:
     - add_logo
 
   - title: Code snippets
+    contents:
     - add_codecov
 
   - title: Document templates
