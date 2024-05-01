@@ -3,6 +3,7 @@
 export(add_badge_codefactor)
 export(add_badge_status)
 export(add_badge_zenodo)
+export(add_codecov)
 export(add_contributing)
 export(add_issue_template)
 export(add_logo)
