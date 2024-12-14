@@ -1,7 +1,7 @@
 Package: pakete
 Type: Package
 Title: Utilities for Package Development
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person(given = "Ernest", 
                   family = "Guevarra", 
                   comment = c(ORCID = "0000-0002-4887-4415"), 
@@ -23,7 +23,7 @@ Suggests:
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 URL: https://katilingban.io/pakete/, https://github.com/katilingban/pakete
 VignetteBuilder: knitr

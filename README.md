@@ -12,7 +12,8 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml)
 [![test-coverage](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml)
-[![codecov](https://codecov.io/gh/katilingban/pakete/graph/badge.svg?token=X6P9OW7XFL)](https://codecov.io/gh/katilingban/pakete)
+[![Codecov test
+coverage](https://codecov.io/gh/katilingban/pakete/branch/main/graph/badge.svg)](https://app.codecov.io/gh/katilingban/pakete?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/katilingban/pakete/badge)](https://www.codefactor.io/repository/github/katilingban/pakete)
 [![DOI](https://zenodo.org/badge/790010725.svg)](https://zenodo.org/badge/latestdoi/790010725)
 <!-- badges: end -->
@@ -22,23 +23,25 @@ usual development tools. These are mostly linked to personal preferences
 during the development process. They assist in making routine and
 repetitive tasks easily implementable.
 
-## What does `pakete` do?
+## What does pakete do?
 
-Currently, `pakete` includes functions for:
+Currently, `{pakete}` includes functions for:
 
-1.  creating GitHub checklists for tasks in the package submission
-    process;
+1.  creating GitHub checklists for tasks in the package submission or
+    package maintenance process;
 
 2.  creating `CONTRIBUTING.md` file;
 
-3.  adding `repostatus` badge; and,
+3.  adding [repostatus](https://www.repostatus.org/) badge;
 
-4.  adding Zenodo DOI badge.
+4.  adding [CodeFactor](https://www.codefactor.io/) badge; and,
+
+5.  adding [Zenodo](https://zenodo.org/) DOI badge.
 
 ## Installation
 
-You can install `pakete` via the [Katilingban
-R-universe](https://katilingban.r-universe.dev) as follows:
+You can install `{pakete}` via the [Katilingban R
+Universe](https://katilingban.r-universe.dev) as follows:
 
 ``` r
 install.packages(
@@ -98,14 +101,14 @@ add_contributing(repo = "YOUR_GITHUB_USERNAME/YOUR_REPO_NAME")
 This will create a `CONTRIBUTING.md` file within the `.github` directory
 (this will be created if it doesn’t exist). Do note that the
 contributing process described in this markdown document is the
-preferred process of those who developed the `pakete` package. If you
+preferred process of those who developed the `{pakete}` package. If you
 are starting out and need something to use or something to build on,
 then this can help.
 
-### Adding a `repostatus` badge
+### Adding a repostatus badge
 
 If you would like to add one of the badges from
-[`repostatus`](https://www.repostatus.org/) to signify the development
+[repostatus](https://www.repostatus.org/) to signify the development
 status of your project, you can do so as follows:
 
 ``` r
@@ -117,9 +120,10 @@ badges are usually placed.
 
 ### Adding a Zenodo badge
 
-If you use Zenodo and would like to add a Zenodo badge to your README
-(even if you haven’t made a release for your repository/project), you
-can use the `add_badge_zenodo()` function as follows:
+If you use Zenodo and would like to add a [Zenodo](https://zenodo.org/)
+badge to your README (even if you haven’t made a release for your
+repository/project, a pre-allocation of DOI is made), you can use the
+`add_badge_zenodo()` function as follows:
 
 ``` r
 add_badge_zenodo(repo = "YOUR_GITHUB_USERNAME/YOUR_REPO_NAME")
@@ -139,15 +143,17 @@ relation to the Zenodo release URL.
 
 ## Citation
 
-If you find the `pakete` package useful please cite using the suggested
-citation provided by a call to the `citation()` function as follows:
+If you find the `{pakete}` package useful please cite using the
+suggested citation provided by a call to the `citation()` function as
+follows:
 
 ``` r
 citation("pakete")
 #> To cite pakete in publications use:
 #> 
-#>   Ernest Guevarra (2024). _pakete: Utilities for Package Development_.
-#>   R package version 0.0.9000, <https://katilingban.io/pakete/>.
+#>   Ernest Guevarra (2024). _pakete: Utilities for Package
+#>   Development_. R package version 0.0.9000,
+#>   <https://katilingban.io/pakete/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -168,6 +174,6 @@ you would like to contribute to the package, please see our
 [contributing
 guidelines](https://katilingban.io/pakete/CONTRIBUTING.html).
 
-Please note that the `pakete` project is released with a [Contributor
+Please note that the `{pakete}` project is released with a [Contributor
 Code of Conduct](https://katilingban.io/pakete/CODE_OF_CONDUCT.html). By
 contributing to this project, you agree to abide by its terms.
