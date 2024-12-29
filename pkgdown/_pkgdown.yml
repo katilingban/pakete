@@ -8,36 +8,27 @@ development:
 template:
   bootstrap: 5
   bootswatch: sandstone
-  theme: haddock
-  ganalytics: #
+  theme: breeze-light
+  ganalytics: "G-SK6XNBHBEC"
 
 navbar:
   bg: primary
   type: light
   structure:
     left:  [home, intro, reference, articles, news]
-    right: [mastodon, linkedin, github]
+    right: [search, mastodon, linkedin, github]
 
   components:
     intro:
       text: "Why pakete?"
       href: articles/pakete.html
-    # articles:
-    #   text: Articles
-    #   menu:
-    #   - text: "Africa CDC"
-    #     href: articles/africa-cdc.html
-    #   - text: "World Bank"
-    #     href: articles/world-bank.html
-    #   - text: "UNICEF"
-    #     href: articles/unicef.html
-    #   - text: "NHS"
-    #     href: articles/nhs.html
     mastodon:
       icon: "fab fa-mastodon fa-lg"
+      aria-label: Mastodon
       href: https://fosstodon.org/@katilingban
     linkedin:
       icon: "fab fa-linkedin fa-lg"
+      aria-label: LinkedIn
       href: https://www.linkedin.com/company/katilingban
 
 home:
