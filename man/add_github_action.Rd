@@ -22,6 +22,6 @@ A GitHub Action YAML file of the specified workflow to be added in
 Add GitHub Actions
 }
 \examples{
-if (interactive()) add_github_action(gha_name = "netlify")
+if (FALSE) add_github_action(gha_name = "netlify")
 
 }

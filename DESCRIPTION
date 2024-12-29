@@ -19,7 +19,8 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    spelling
+    spelling,
+    testthat (>= 3.0.0)
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
@@ -27,3 +28,4 @@ RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 URL: https://katilingban.io/pakete/, https://github.com/katilingban/pakete
 VignetteBuilder: knitr
+Config/testthat/edition: 3

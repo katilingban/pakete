@@ -11,7 +11,7 @@
 #'   `.github/workflows` directory.
 #' 
 #' @examples
-#' if (interactive()) add_github_action(gha_name = "netlify")
+#' if (FALSE) add_github_action(gha_name = "netlify")
 #' 
 #' @export
 #' @rdname add_github_action

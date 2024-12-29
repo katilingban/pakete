@@ -37,9 +37,11 @@ Currently, `{pakete}` includes functions for:
 
 3. adding [repostatus](https://www.repostatus.org/) badge; 
 
-4. adding [CodeFactor](https://www.codefactor.io/) badge; and,
+4. adding [CodeFactor](https://www.codefactor.io/) badge;
 
-4. adding [Zenodo](https://zenodo.org/) DOI badge.
+5. adding [Zenodo](https://zenodo.org/) DOI badge; and,
+
+6. adding GitHub Actions.
 
 ## Installation
 
