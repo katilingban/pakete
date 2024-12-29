@@ -6,7 +6,7 @@ Authors@R: person(given = "Ernest",
                   family = "Guevarra", 
                   comment = c(ORCID = "0000-0002-4887-4415"), 
                   email = "ernest@guevarra.io", 
-                  role = c("aut", "cre"))
+                  role = c("aut", "cre", "cph"))
 Description: Tools and utilities for package development currently not
    available from usual development tools. These are mostly linked to personal
    preferences during the development process. They assist in making routine

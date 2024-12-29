@@ -48,6 +48,10 @@ reference:
     contents:
     - add_codecov
 
+  - title: GitHub Actions templates
+    contents:
+    - add_github_action
+
   - title: Document templates
     contents:
     - add_contributing
