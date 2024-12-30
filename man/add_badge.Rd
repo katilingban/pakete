@@ -13,9 +13,9 @@ add_badge_status(
   .url = NULL
 )
 
-add_badge_codefactor(repo = NULL, path = NULL)
+add_badge_codefactor(repo = get_github_repository(), path = NULL)
 
-add_badge_zenodo(repo = NULL, path = NULL)
+add_badge_zenodo(repo = get_github_repository(), path = NULL)
 }
 \arguments{
 \item{status}{A character value for status to be assigned to project. This

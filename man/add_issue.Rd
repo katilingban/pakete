@@ -4,7 +4,11 @@
 \alias{add_issue_template}
 \title{Add issue templates}
 \usage{
-add_issue_template(issue, path = ".github/ISSUE_TEMPLATE", overwrite = FALSE)
+add_issue_template(
+  issue = NULL,
+  path = ".github/ISSUE_TEMPLATE",
+  overwrite = FALSE
+)
 }
 \arguments{
 \item{issue}{A character value of type of issue template to create. Choices

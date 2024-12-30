@@ -13,8 +13,9 @@ Description: Tools and utilities for package development currently not
    and repetitive tasks easily implementable.
 License: GPL (>= 3)
 Imports: 
+    cli,
     jsonlite,
-    stringr,
+    utils,
     withr
 Suggests: 
     knitr,

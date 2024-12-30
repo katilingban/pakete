@@ -31,16 +31,13 @@ add_badge_status <- function(status = c("concept", "wip", "suspended",
                                         "unsupported", "moved"),
                              path = NULL,
                              .url = NULL) {
+  ## cli header 1 ----
+  cli::cli_h1("Add repostatus badge")
+  
   ## Determine status ----
   status <- match.arg(status)
 
-  ## Determine which file to append badge to ----
-  if (is.null(path)) {
-    if (file.exists("README.Rmd"))
-      path <- "README.Rmd"
-    else
-      path <- "README.md"
-  }
+  cli::cli_h2("Creating {status} repostatus badge")
 
   ## Determine what text to use based on status ----
   status_text_url <- paste0(
@@ -50,42 +47,43 @@ add_badge_status <- function(status = c("concept", "wip", "suspended",
   ## Read the badge text ----
   badge_text <- readLines(con = status_text_url)
 
-  ## Replace http://example.com with .url ----
-  if (!is.null(.url)) {
-    badge_text <- stringr::str_replace_all(
-      string = badge_text, pattern = "http://example.com", replacement = .url
-    )
+  ## If status is moved ----
+  if (status == "moved") {
+    ## Check if .url is provided ----
+    if (is.null(.url)) {
+      cli::cli_abort(
+        c(
+          '{.var .url} cannot be NULL when {.var status} is "moved"',
+          "x" = '{.var .url} is NULL and {.var status} is "moved"'
+        )
+      )
+    } else {
+      ## Replace https://example.com ----
+      badge_text <- gsub(
+        pattern = "http://example.com", replacement = .url, x = badge_text
+      )
+    }
   }
+
+  cli::cli_bullets(
+    c(
+      "v" = "{status} repostatus badge created",
+      "i" = "Badge: {badge_text}"
+    )
+  )
+
+  cli::cli_h2("Adding {status} repostatus badge to README file")
+
+  ## Determine which file to append badge to ----
+  path <- get_readme_path(path = path)
 
   ## Read file in path ----
   readme_lines <- readLines(path, encoding = "UTF-8")
 
-  if (all(badge_text %in% readme_lines))
-    return(FALSE)
-
-  ## Get start and end line of badges ----
-  badges_start_line <- stringr::str_detect(
-    readme_lines, pattern = "badges: start"
-  ) |>
-    (\(x) seq_len(length(x))[x])()
-
-  badges_end_line <- stringr::str_detect(
-    readme_lines, pattern = "badges: end"
-  ) |>
-    (\(x) seq_len(length(x))[x])()
-
-  ## Create replacement text ----
-  readme_lines <- c(
-    readme_lines[seq_len(badges_end_line - 1)],
-    badge_text,
-    readme_lines[seq(from = badges_end_line, to = length(readme_lines))]
+  ## Insert badge text to README ----
+  insert_readme_badge_text(
+    badge_text = badge_text, readme_lines = readme_lines, path = path
   )
-
-  ## Append replacement text ----
-  writeLines(text = readme_lines, con = path)
-
-  ## Return TRUE if badge was added ----
-  TRUE
 }
 
 
@@ -96,54 +94,39 @@ add_badge_status <- function(status = c("concept", "wip", "suspended",
 
 add_badge_codefactor <- function(repo = NULL,
                                  path = NULL) {
-  ## Determine repo ----
-  if (is.null(repo))
-    stop("Remote git repository required. Try again")
+  cli::cli_h1("Add CodeFactor badge")
 
+  cli::cli_h2("Creating CodeFactor badge")
+
+  ## Get repo ----
+  if (is.null(repo)) repo <- get_github_repository()
+  
   ## Set CodeFactor defaults ----
   badge <- paste0("https://www.codefactor.io/repository/github/", repo, "/badge")
   link <- paste0("https://www.codefactor.io/repository/github/", repo)
 
-  ## Determine which file to append badge to ----
-  if (is.null(path)) {
-    if (file.exists("README.Rmd"))
-      path <- "README.Rmd"
-    else
-      path <- "README.md"
-  }
-
   ## Create badge_text ----
   badge_text <- paste0("[![CodeFactor](", badge, ")](", link, ")")
+
+  cli::cli_bullets(
+    c(
+      "v" = "CodeFactor badge successfully created.",
+      "i" = "Badge: {badge_text}"
+    )
+  )
+
+  cli::cli_h2("Adding CodeFactor badge to README")
+
+  ## Determine which file to append badge to ----
+  path <- get_readme_path(path = path)
 
   ## Read file in path ----
   readme_lines <- readLines(path, encoding = "UTF-8")
 
-  if (all(badge_text %in% readme_lines))
-    return(FALSE)
-
-  ## Get start and end line of badges ----
-  badges_start_line <- stringr::str_detect(
-    readme_lines, pattern = "badges: start"
-  ) |>
-    (\(x) seq_len(length(x))[x])()
-
-  badges_end_line <- stringr::str_detect(
-    readme_lines, pattern = "badges: end"
-  ) |>
-    (\(x) seq_len(length(x))[x])()
-
-  ## Create replacement text ----
-  readme_lines <- c(
-    readme_lines[seq_len(badges_end_line - 1)],
-    badge_text,
-    readme_lines[seq(from = badges_end_line, to = length(readme_lines))]
+  ## Insert badge text to README ----
+  insert_readme_badge_text(
+    badge_text = badge_text, readme_lines = readme_lines, path = path
   )
-
-  ## Append replacement text ----
-  writeLines(text = readme_lines, con = path)
-
-  ## Return TRUE if badge was added ----
-  TRUE
 }
 
 #'
@@ -153,14 +136,14 @@ add_badge_codefactor <- function(repo = NULL,
 
 add_badge_zenodo <- function(repo = NULL,
                              path = NULL) {
-  ## Determine repo ----
-  if (is.null(repo))
-    stop("Remote git repository required. Try again")
+  cli::cli_h1("Add Zenodo badge")
+
+  cli::cli_h2("Creating Zenodo badge")
+
+  if (is.null(repo)) repo <- get_github_repository()
 
   ## Get repository ID ----
-  repo_id <- file.path("https://api.github.com/repos", repo) |>
-    jsonlite::fromJSON() |>
-    (\(x) x$id)()
+  repo_id <- get_github_repository_id(repo = repo)
 
   ## Set CodeFactor defaults ----
   badge <- paste0("https://zenodo.org/badge/", repo_id, ".svg")
@@ -169,41 +152,23 @@ add_badge_zenodo <- function(repo = NULL,
   ## Create badge text ----
   badge_text <- paste0("[![DOI](", badge, ")](", link, ")")
 
+  cli::cli_bullets(
+    c(
+      "v" = "Zenodo badge successfully created.",
+      "i" = "Badge: {badge_text}"
+    )
+  )
+
+  cli::cli_h2("Adding Zenodo badge to README")
+
   ## Determine which file to append badge to ----
-  if (is.null(path)) {
-    if (file.exists("README.Rmd"))
-      path <- "README.Rmd"
-    else
-      path <- "README.md"
-  }
+  path <- get_readme_path(path = path)
 
   ## Read file in path ----
   readme_lines <- readLines(path, encoding = "UTF-8")
 
-  if (all(badge_text %in% readme_lines))
-    return(FALSE)
-
-  ## Get start and end line of badges ----
-  badges_start_line <- stringr::str_detect(
-    readme_lines, pattern = "badges: start"
-  ) |>
-    (\(x) seq_len(length(x))[x])()
-
-  badges_end_line <- stringr::str_detect(
-    readme_lines, pattern = "badges: end"
-  ) |>
-    (\(x) seq_len(length(x))[x])()
-
-  ## Create replacement text ----
-  readme_lines <- c(
-    readme_lines[seq_len(badges_end_line - 1)],
-    badge_text,
-    readme_lines[seq(from = badges_end_line, to = length(readme_lines))]
+  ## Insert badge text to README ----
+  insert_readme_badge_text(
+    badge_text = badge_text, readme_lines = readme_lines, path = path
   )
-
-  ## Append replacement text ----
-  writeLines(text = readme_lines, con = path)
-
-  ## Return TRUE if badge was added ----
-  TRUE
 }
