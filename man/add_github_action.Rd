@@ -4,7 +4,7 @@
 \alias{add_github_action}
 \title{Add GitHub Actions}
 \usage{
-add_github_action(gha_name, overwrite = FALSE)
+add_github_action(gha_name = NULL, overwrite = FALSE)
 }
 \arguments{
 \item{gha_name}{Short name of GitHub Action to add. Currently supports

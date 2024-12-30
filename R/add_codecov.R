@@ -16,26 +16,20 @@ add_codecov <- function() {
 
   codecov_lines <- readLines("codecov.yml")
 
-  if (
-    any(
-      stringr::str_detect(
-        string = codecov_lines, pattern = "token", negate = TRUE
-      )
+  if (any(!grepl(pattern = "token", x = codecov_lines))) {
+    FALSE
+  } else {
+    codecov_lines <- c(
+      "codecov:",
+      "  token: ${{ secrets.CODECOV_TOKEN }}",
+      "",
+      codecov_lines
     )
-  )
-    return (FALSE)
-
-
-  codecov_lines <- c(
-    "codecov:",
-    "  token: ${{ secrets.CODECOV_TOKEN }}",
-    "",
-    codecov_lines
-  )
-
-  ## Append replacement text ----
-  writeLines(text = codecov_lines, con = "codecov.yml")
-
-  ## Return TRUE if snippet was added ----
-  TRUE
+  
+    ## Append replacement text ----
+    writeLines(text = codecov_lines, con = "codecov.yml")
+  
+    ## Return TRUE if snippet was added ----
+    TRUE
+  }
 }

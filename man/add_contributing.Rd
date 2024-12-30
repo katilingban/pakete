@@ -4,11 +4,14 @@
 \alias{add_contributing}
 \title{Add contributing markdown}
 \usage{
-add_contributing(repo = NULL)
+add_contributing(repo = NULL, overwrite = FALSE)
 }
 \arguments{
 \item{repo}{Short remote git repository name. If NULL, is determined based
 on current git settings.}
+
+\item{overwrite}{Logical. Should an existing CONTRIBUTING.md file be
+overwritten? Default to FALSE.}
 }
 \value{
 A CONTRIBUTING.md file in the \code{.github} directory
@@ -17,6 +20,6 @@ A CONTRIBUTING.md file in the \code{.github} directory
 Add contributing markdown
 }
 \examples{
-if (interactive()) add_contributing("katilingban/pakete")
+if (FALSE) add_contributing("katilingban/pakete")
 
 }
