@@ -171,7 +171,7 @@ insert_readme_badge_text <- function(badge_text = NULL,
     ## Success message that status badge has been added ----
     cli::cli_bullets(
       c(
-        "v" = "{.strong {status}} repostatus badge successfully added to README",
+        "v" = "Badge successfully added to README",
         "i" = "README file: {.file {path}}"
       )
     )
