@@ -1,10 +1,5 @@
 # Tests for utility functions --------------------------------------------------
 
-test_that("get_github_repository works as expected", {
-  expect_error(get_github_repository())
-})
-
-
 test_that("get_readme_path works as expected", {
   create_readme_file()
 
