@@ -44,10 +44,6 @@ reference:
     - add_badge_zenodo
     - add_logo
 
-  - title: Code snippets
-    contents:
-    - add_codecov
-
   - title: GitHub Actions templates
     contents:
     - add_github_action
