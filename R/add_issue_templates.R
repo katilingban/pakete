@@ -38,7 +38,7 @@ add_issue_template <- function(issue = NULL,
       )
     )
     
-    dir.create("path")
+    dir.create(path, recursive = TRUE)
 
     cli::cli_alert_success(
       "{.file {path}} directory successfully created."

@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 [![DOI](https://zenodo.org/badge/790010725.svg)](https://zenodo.org/badge/latestdoi/790010725)
 <!-- badges: end -->
 
-Tools and utilities for package development currently not available from usual development tools. These are mostly linked to personal preferences during the development process. They assist in making routine and repetitive tasks easily implementable.
+Tools and utilities for package development currently not available from usual development tools. These are mostly linked to the author's personal preferences during the package development process. They assist in making routine and repetitive tasks easily implementable.
 
 ## What does pakete do?
 
@@ -41,7 +41,7 @@ Currently, `{pakete}` includes functions for:
 
 5. adding [Zenodo](https://zenodo.org/) DOI badge; and,
 
-6. adding GitHub Actions.
+6. adding specific GitHub Actions.
 
 ## Installation
 
@@ -50,7 +50,9 @@ You can install `{pakete}` via the [Katilingban R Universe](https://katilingban.
 ```{r install-r-universe, eval = FALSE}
 install.packages(
   "pakete",
-  repos = c('https://katilingban.r-universe.dev', 'https://cloud.r-project.org')
+  repos = c(
+    'https://katilingban.r-universe.dev', 'https://cloud.r-project.org'
+  )
 )
 ```
 
