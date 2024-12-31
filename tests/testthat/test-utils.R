@@ -1,5 +1,14 @@
 # Tests for utility functions --------------------------------------------------
 
+test_that("get_github_repository works as expected", {
+  if (Sys.info()[["sysname"]] == "Windows") {
+    expect_type(get_github_repository(), "character")
+  } else {
+    expect_error(get_github_repository())
+  }
+})
+
+
 test_that("get_readme_path works as expected", {
   create_readme_file()
 
