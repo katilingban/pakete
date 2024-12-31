@@ -34,7 +34,7 @@ add_github_action <- function(gha_name = NULL, overwrite = FALSE) {
       )
     )
     
-    dir.create(".github/workflows")
+    dir.create(".github/workflows", recursive = TRUE)
 
     cli::cli_alert_success(
       "{.file .github/workflows} directory successfully created."
