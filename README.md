@@ -19,9 +19,9 @@ coverage](https://codecov.io/gh/katilingban/pakete/branch/main/graph/badge.svg)]
 <!-- badges: end -->
 
 Tools and utilities for package development currently not available from
-usual development tools. These are mostly linked to personal preferences
-during the development process. They assist in making routine and
-repetitive tasks easily implementable.
+usual development tools. These are mostly linked to the author’s
+personal preferences during the package development process. They assist
+in making routine and repetitive tasks easily implementable.
 
 ## What does pakete do?
 
@@ -38,7 +38,7 @@ Currently, `{pakete}` includes functions for:
 
 5.  adding [Zenodo](https://zenodo.org/) DOI badge; and,
 
-6.  adding GitHub Actions.
+6.  adding specific GitHub Actions.
 
 ## Installation
 
@@ -48,7 +48,9 @@ Universe](https://katilingban.r-universe.dev) as follows:
 ``` r
 install.packages(
   "pakete",
-  repos = c('https://katilingban.r-universe.dev', 'https://cloud.r-project.org')
+  repos = c(
+    'https://katilingban.r-universe.dev', 'https://cloud.r-project.org'
+  )
 )
 ```
 
