@@ -1,3 +1,12 @@
+# pakete 0.2.0
+
+## Major changes
+
+* refactor of all functions to remove dependency to `{stringr}` package
+* refactor of all functions to implement semantic CLI via `{cli}` package
+* complete testing suite
+
+
 # pakete 0.1.0
 
 This is a first release of the `{pakete}` package to [R Universe](https://katilingban.r-universe.dev/pakete).
