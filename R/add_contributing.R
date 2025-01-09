@@ -87,9 +87,8 @@ create_contributing <- function(repo) {
     x = contrib_lines
   )
 
-  contrib_lines
-
   cli::cli_alert_success("{.strong CONTRIBUTING} text created.")
+  contrib_lines
 }
 
 #'
