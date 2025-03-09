@@ -87,7 +87,8 @@ choose_gha_workflow <- function(gha_name) {
   prompt <- cli::format_inline("Which action do you want to add? (0 to exit)\n")
 
   workflows <- c(
-    "netlify" = "Preview pkgdown website on pull request via Netlify"
+    "netlify" = "Preview pkgdown website on pull request via Netlify",
+    "mirror-to-codeberg" = "Setup mirroring to Codeberg"
   )
   
   options <- paste0(cli::style_bold(names(workflows)), ": ", workflows)
