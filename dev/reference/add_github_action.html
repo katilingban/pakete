@@ -41,7 +41,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">add_github_action</span><span class="op">(</span>gha_name <span class="op">=</span> <span class="cn">NULL</span>, overwrite <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">add_github_action</span><span class="op">(</span>gha_name <span class="op">=</span> <span class="cn">NULL</span>, repo <span class="op">=</span> <span class="cn">NULL</span>, overwrite <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -52,6 +52,12 @@
 <dd><p>Short name of GitHub Action to add. Currently supports
 GitHub Action for Netlify deployment of testing version of pkgdown website
 (<em>"netlify"</em>).</p></dd>
+
+
+<dt id="arg-repo">repo<a class="anchor" aria-label="anchor" href="#arg-repo"></a></dt>
+<dd><p>Short remote git repository name. If NULL, is determined based
+on current git settings. Evaluated only if <code>gha_name</code> is
+<em>"mirror-codeberg"</em>.</p></dd>
 
 
 <dt id="arg-overwrite">overwrite<a class="anchor" aria-label="anchor" href="#arg-overwrite"></a></dt>
