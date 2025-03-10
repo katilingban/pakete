@@ -4,7 +4,13 @@
 \alias{add_gha_workflow}
 \title{Add GHA workflow}
 \usage{
-add_gha_workflow(gha_name, gha_file_name, gha_file_path, overwrite)
+add_gha_workflow(
+  gha_name,
+  gha_file_name,
+  gha_file_path,
+  repo = NULL,
+  overwrite
+)
 }
 \description{
 Add GHA workflow

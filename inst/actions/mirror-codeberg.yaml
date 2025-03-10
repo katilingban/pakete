@@ -14,6 +14,6 @@ jobs:
           fetch-depth: 0
       - uses: yesolutions/mirror-action@master
         with:
-          REMOTE: 'https://gitlab.com/spyoungtech/mirror-action.git'
-          GIT_USERNAME: ernestguevarra
-          GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+          REMOTE: CODEBERG_REMOTE
+          GIT_USERNAME: ${{ secrets.CODEBERG_USERNAME }}
+          GIT_PASSWORD: ${{ secrets.CODEBERG_TOKEN }}

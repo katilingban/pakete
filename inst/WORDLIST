@@ -1,5 +1,6 @@
 CMD
 CodeFactor
+Codeberg
 Codecov
 GHA
 Katilingban
@@ -9,6 +10,7 @@ ORCID
 WIP
 YAML
 Zenodo
+codeberg
 codecov
 cran
 github
@@ -19,4 +21,5 @@ pkgdown
 repostatus
 te
 wip
+yaml
 yml
