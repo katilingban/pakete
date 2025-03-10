@@ -1,3 +1,10 @@
+# pakete 0.2.0.9000
+
+## Major changes
+
+* added templates and functions for Codeberg mirroring
+* added templates and functions for Codeberg CI using Woodpecker
+
 # pakete 0.2.0
 
 ## Major changes
