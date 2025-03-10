@@ -6,6 +6,9 @@
 #'   (*"netlify"*).
 #' @param overwrite Logical. Should an existing GitHub Action be overwritten?
 #'   Default is FALSE.
+#' @param repo Short remote git repository name. If NULL, is determined based
+#'   on current git settings. Evaluated only if `gha_name` is
+#'   *"mirror-codeberg"*.
 #' 
 #' @returns A GitHub Action YAML file of the specified workflow to be added in
 #'   `.github/workflows` directory.
@@ -17,7 +20,7 @@
 #' @rdname add_github_action
 #' 
 
-add_github_action <- function(gha_name = NULL, overwrite = FALSE) {
+add_github_action <- function(gha_name = NULL, repo = NULL, overwrite = FALSE) {
   cli::cli_h1("Add GitHub Actions workflow")
 
   ## Check gha_name ----
@@ -46,7 +49,7 @@ add_github_action <- function(gha_name = NULL, overwrite = FALSE) {
   ## Get GitHub Actions YAML file name ----
   gha_file_name <- paste0(gha_name, ".yaml")
   gha_file_path <- file.path(".github/workflows", gha_file_name)
-  
+
   ## Check if file already exists ----
   if (file.exists(gha_file_path)) {
     cli::cli_alert_warning("{.strong {gha_name}} workflow already exists")
@@ -61,12 +64,14 @@ add_github_action <- function(gha_name = NULL, overwrite = FALSE) {
       FALSE
     } else {
       add_gha_workflow(
-        gha_name, gha_file_name, gha_file_path, overwrite = overwrite
+        gha_name, gha_file_name, gha_file_path, 
+        repo = repo, overwrite = overwrite
       )
     }
   } else {
     add_gha_workflow(
-      gha_name, gha_file_name, gha_file_path, overwrite = overwrite
+      gha_name, gha_file_name, gha_file_path, 
+      repo = repo, overwrite = overwrite
     )
   }  
 }
@@ -87,7 +92,8 @@ choose_gha_workflow <- function(gha_name) {
   prompt <- cli::format_inline("Which action do you want to add? (0 to exit)\n")
 
   workflows <- c(
-    "netlify" = "Preview pkgdown website on pull request via Netlify"
+    "netlify" = "Preview pkgdown website on pull request via Netlify",
+    "mirror-codeberg" = "Mirror repository to Codeberg" 
   )
   
   options <- paste0(cli::style_bold(names(workflows)), ": ", workflows)
@@ -113,17 +119,24 @@ choose_gha_workflow <- function(gha_name) {
 
 add_gha_workflow <- function(gha_name, 
                              gha_file_name, 
-                             gha_file_path, 
+                             gha_file_path,
+                             repo = NULL, 
                              overwrite) {
   cli::cli_h2("Adding {gha_name} workflow")
 
-  file.copy(
-    from = system.file("actions", gha_file_name, package = "pakete"),
-    to = ".github/workflows",
-    overwrite = overwrite,
-    recursive = FALSE
-  )
-
+  ## Mirror Codeberg workflow ----
+  if (gha_name == "mirror-codeberg") {
+    gha_text <- create_gha_workflow_codeberg_mirror(repo = repo)
+    save_gha_workflow_codeberg_mirror(gha_text = gha_text)
+  } else {
+    file.copy(
+      from = system.file("actions", gha_file_name, package = "pakete"),
+      to = ".github/workflows",
+      overwrite = overwrite,
+      recursive = FALSE
+    )
+  }
+  
   if (overwrite) {
     cli::cli_bullets(
       c(
@@ -141,4 +154,63 @@ add_gha_workflow <- function(gha_name,
       )
     )
   }
+}
+
+#'
+#' @keywords internal
+#' 
+
+create_gha_workflow_codeberg_mirror <- function(repo = NULL) {
+  ## Create Codeberg mirror GHA workflow ----
+  cli::cli_h2("Creating Codeberg mirror GitHub Actions workflow text")
+
+  ## Get repo of repo is NULL ----
+  if (is.null(repo)) repo <- get_github_repository()
+
+  ## Create codeberg git url ----
+  codeberg_remote <- file.path("https://codeberg.org", repo)
+
+  gha_text <- readLines(
+    con = system.file("actions", "mirror-codeberg.yaml", package = "pakete")
+  )
+
+  gha_text <- gha_text |>
+    sub(pattern = "CODEBERG_REMOTE", replacement = codeberg_remote, x = _)
+
+  cli::cli_alert_success("{.strong Codeberg mirror GitHub Actions} text created.")
+  gha_text
+}
+
+
+#'
+#' Save Codeberg mirror GitHub Actions workflow
+#' 
+#' @param gha_text Codeberg mirror GitHub Actions workflow text to save into
+#'   mirror-codeberg.yaml.
+#' 
+#' @returns A mirror-codeberg.yaml file in the `.github/workflows` directory
+#' 
+#' @examples
+#' if (FALSE) save_gha_workflow_codeberg_mirror(gha_text)
+#'
+#' @keywords internal 
+#' 
+
+save_gha_workflow_codeberg_mirror <- function(gha_text) {
+  ## Save mirror-codeberg.yaml ----
+  cli::cli_h2("Saving mirror-codeberg.yaml")
+
+  withr::with_output_sink(
+    new = ".github/workflows/mirror-codeberg.yaml",
+    code = writeLines(
+      text = gha_text, con = ".github/workflows/mirror-codeberg.yaml"
+    )
+  )
+
+  cli::cli_bullets(
+    c(
+      "v" = "{.strong mirror-codeberg.yaml} successfully saved.",
+      "i" = "File: {.file .github/working/mirror-codeberg.yaml}"
+    )
+  )
 }

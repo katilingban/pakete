@@ -4,12 +4,16 @@
 \alias{add_github_action}
 \title{Add GitHub Actions}
 \usage{
-add_github_action(gha_name = NULL, overwrite = FALSE)
+add_github_action(gha_name = NULL, repo = NULL, overwrite = FALSE)
 }
 \arguments{
 \item{gha_name}{Short name of GitHub Action to add. Currently supports
 GitHub Action for Netlify deployment of testing version of pkgdown website
 (\emph{"netlify"}).}
+
+\item{repo}{Short remote git repository name. If NULL, is determined based
+on current git settings. Evaluated only if \code{gha_name} is
+\emph{"mirror-codeberg"}.}
 
 \item{overwrite}{Logical. Should an existing GitHub Action be overwritten?
 Default is FALSE.}
