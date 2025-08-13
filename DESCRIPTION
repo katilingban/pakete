@@ -1,7 +1,7 @@
 Package: pakete
 Type: Package
 Title: Utilities for Package Development
-Version: 0.2.0.9000
+Version: 0.2.1.9000
 Authors@R: person(given = "Ernest", 
                   family = "Guevarra", 
                   comment = c(ORCID = "0000-0002-4887-4415"), 
@@ -12,6 +12,8 @@ Description: Tools and utilities for package development currently not
    preferences during the development process. They assist in making routine
    and repetitive tasks easily implementable.
 License: GPL (>= 3)
+Depends: 
+    R (>= 4.2.0)
 Imports: 
     cli,
     jsonlite,
