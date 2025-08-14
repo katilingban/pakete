@@ -2,7 +2,7 @@
 #' Get current remote GitHub repository
 #' 
 #' @param full Logical. Should full GitHub remote URL be extracted? Default to
-#'   FA:SE.
+#'   FALSE.
 #' 
 #' @returns GitHub remote repository.
 #' 

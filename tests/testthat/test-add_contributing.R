@@ -15,21 +15,21 @@ test_that("add_contributing works as expected", {
 })
 
 
-# test_that("overwrite = TRUE works as expected", {
-#   dir.create(".github")
+test_that("overwrite = TRUE works as expected", {
+  dir.create(".github")
 
-#   file.copy(
-#     from = system.file("templates", "CONTRIBUTING.md", package = "pakete"),
-#     to = ".github"
-#   )
+  file.copy(
+    from = system.file("templates", "CONTRIBUTING.md", package = "pakete"),
+    to = ".github"
+  )
 
-#   add_contributing(repo = "katilingban/pakete", overwrite = TRUE)
+  add_contributing(repo = "katilingban/pakete", overwrite = TRUE)
 
-#   expect_snapshot_file(
-#     path = ".github/CONTRIBUTING.md",
-#     name = "CONTRIBUTING.md"
-#   )
+  expect_snapshot_file(
+    path = ".github/CONTRIBUTING.md",
+    name = "CONTRIBUTING.md"
+  )
 
-#   file.remove(".github/CONTRIBUTING.md")
-#   unlink(".github", recursive = TRUE)
-# })
+  file.remove(".github/CONTRIBUTING.md")
+  unlink(".github", recursive = TRUE)
+})

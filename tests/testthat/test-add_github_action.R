@@ -68,3 +68,4 @@ test_that("add_github_action overwrite = FALSE works as expected", {
   file.remove(".github/workflows/netlify.yaml")
   unlink(".github", recursive = TRUE)
 })
+

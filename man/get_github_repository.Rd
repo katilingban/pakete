@@ -8,7 +8,7 @@ get_github_repository(full = FALSE)
 }
 \arguments{
 \item{full}{Logical. Should full GitHub remote URL be extracted? Default to
-FA:SE.}
+FALSE.}
 }
 \value{
 GitHub remote repository.
