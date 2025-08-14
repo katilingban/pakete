@@ -3,7 +3,8 @@
 #' 
 #' @param gha_name Short name of GitHub Action to add. Currently supports
 #'   GitHub Action for Netlify deployment of testing version of pkgdown website
-#'   (*"netlify"*).
+#'   (*"netlify"*) and GitHub Action for mirroring to Codeberg
+#'   (*"mirror-codeberg"*).
 #' @param overwrite Logical. Should an existing GitHub Action be overwritten?
 #'   Default is FALSE.
 #' @param repo Short remote git repository name. If NULL, is determined based
