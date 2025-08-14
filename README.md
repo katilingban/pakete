@@ -38,7 +38,9 @@ Currently, `{pakete}` includes functions for:
 
 5.  adding [Zenodo](https://zenodo.org/) DOI badge; and,
 
-6.  adding specific GitHub Actions.
+6.  adding specific GitHub Actions such as test deployment of package
+    website to [Netlify](https://www.netlify.com/) and mirroring of
+    repository to [Codeberg](https://codeberg.org/).
 
 ## Installation
 
@@ -155,9 +157,8 @@ follows:
 citation("pakete")
 #> To cite pakete in publications use:
 #> 
-#>   Ernest Guevarra (2024). _pakete: Utilities for Package
-#>   Development_. R package version 0.0.9000,
-#>   <https://katilingban.io/pakete/>.
+#>   Ernest Guevarra (2024). _pakete: Utilities for Package Development_.
+#>   R package version 0.0.9000, <https://katilingban.io/pakete/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 

@@ -41,7 +41,7 @@ Currently, `{pakete}` includes functions for:
 
 5. adding [Zenodo](https://zenodo.org/) DOI badge; and,
 
-6. adding specific GitHub Actions.
+6. adding specific GitHub Actions such as test deployment of package website to [Netlify](https://www.netlify.com/) and mirroring of repository to [Codeberg](https://codeberg.org/).
 
 ## Installation
 
@@ -117,4 +117,3 @@ citation("pakete")
 Feedback, bug reports and feature requests are welcome; file issues or seek support [here](https://github.com/katilingban/pakete/issues). If you would like to contribute to the package, please see our [contributing guidelines](https://katilingban.io/pakete/CONTRIBUTING.html).
 
 Please note that the `{pakete}` project is released with a [Contributor Code of Conduct](https://katilingban.io/pakete/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
-
