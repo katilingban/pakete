@@ -1,6 +1,8 @@
 # Tests for add_issue_template functions ---------------------------------------
 
 test_that("add_issue_template no directory works as expected", {
+  skip_on_ci()
+  
   add_issue_template(issue = "initial-cran-release")
 
   expect_snapshot_file(

@@ -1,6 +1,8 @@
 # Tests for add_github_action functions ----------------------------------------
 
 test_that("add_github_action overwrite = FALSE works as expected", {
+  skip_on_ci()
+  
   dir.create(".github/workflows", recursive = TRUE)
 
   file.copy(

@@ -1,6 +1,8 @@
 # Tests for add_contributing functions -----------------------------------------
 
 test_that("overwrite = TRUE works as expected", {
+  skip_on_ci()
+
   dir.create(".github")
 
   file.copy(

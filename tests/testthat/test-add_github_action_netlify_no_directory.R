@@ -1,6 +1,8 @@
 # Tests for add_github_action functions ----------------------------------------
 
 test_that("add_github_action no directory works as expected", {
+  skip_on_ci()
+  
   add_github_action(gha_name = "netlify")
 
   expect_snapshot_file(

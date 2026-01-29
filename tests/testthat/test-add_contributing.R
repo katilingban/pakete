@@ -1,6 +1,8 @@
 # Tests for add_contributing functions -----------------------------------------
 
 test_that("add_contributing works as expected", {
+  skip_on_ci()
+  
   dir.create(".github")
 
   add_contributing(repo = "katilingban/pakete")

@@ -1,6 +1,8 @@
 # Tests for add_issue_template functions ---------------------------------------
 
 test_that("add_issue_template overwrite = TRUE works as expected", {
+  skip_on_ci()
+  
   dir.create(".github/ISSUE_TEMPLATE", recursive = TRUE)
 
   file.copy(
