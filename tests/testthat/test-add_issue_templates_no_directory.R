@@ -1,10 +1,6 @@
 # Tests for add_issue_template functions ---------------------------------------
 
-test_that("add_issue_template works as expected", {
-  dir.create(".github/ISSUE_TEMPLATE", recursive = TRUE)
-
-  expect_error(add_issue_template())
-
+test_that("add_issue_template no directory works as expected", {
   add_issue_template(issue = "initial-cran-release")
 
   expect_snapshot_file(

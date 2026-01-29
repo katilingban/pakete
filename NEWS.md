@@ -3,8 +3,8 @@
 ## Major changes
 
 * added templates and functions for Codeberg mirroring
-* added templates and functions for Codeberg CI using Woodpecker
 
+<br/>
 
 # pakete 0.2.0
 
@@ -14,6 +14,7 @@
 * refactor of all functions to implement semantic CLI via `{cli}` package
 * complete testing suite
 
+<br/>
 
 # pakete 0.1.0
 
@@ -31,6 +32,7 @@ This is a first release of the `{pakete}` package to [R Universe](https://katili
 * setup netlify; add_github_action; fix #25; fix #32; fix #33; fix #34 by @ernestguevarra in https://github.com/katilingban/pakete/pull/41
 * add NEWS.md; fix #30 by @ernestguevarra in https://github.com/katilingban/pakete/pull/42
 
+<br/>
 
 # pakete 0.0.0.9000
 

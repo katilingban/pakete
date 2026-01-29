@@ -13,9 +13,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml)
 [![test-coverage](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/katilingban/pakete/branch/main/graph/badge.svg)](https://app.codecov.io/gh/katilingban/pakete?branch=main)
+coverage](https://codecov.io/gh/katilingban/pakete/graph/badge.svg)](https://app.codecov.io/gh/katilingban/pakete)
 [![CodeFactor](https://www.codefactor.io/repository/github/katilingban/pakete/badge)](https://www.codefactor.io/repository/github/katilingban/pakete)
-[![DOI](https://zenodo.org/badge/790010725.svg)](https://zenodo.org/badge/latestdoi/790010725)
+[![DOI](https://zenodo.org/badge/790010725.svg)](https://doi.org/10.5281/zenodo.11040826)
 <!-- badges: end -->
 
 Tools and utilities for package development currently not available from
@@ -158,7 +158,9 @@ citation("pakete")
 #> To cite pakete in publications use:
 #> 
 #>   Ernest Guevarra (2024). _pakete: Utilities for Package Development_.
-#>   R package version 0.0.9000, <https://katilingban.io/pakete/>.
+#>   doi:10.5281/zenodo.11040826
+#>   <https://doi.org/10.5281/zenodo.11040826>, R package version 0.2.0,
+#>   <https://katilingban.io/pakete/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -166,8 +168,9 @@ citation("pakete")
 #>     title = {pakete: Utilities for Package Development},
 #>     author = {{Ernest Guevarra}},
 #>     year = {2024},
-#>     note = {R package version 0.0.9000},
+#>     note = {R package version 0.2.0},
 #>     url = {https://katilingban.io/pakete/},
+#>     doi = {10.5281/zenodo.11040826},
 #>   }
 ```
 

@@ -4,7 +4,7 @@ bibentry(
   title    = "pakete: Utilities for Package Development",
   author   = person("Ernest Guevarra"),
   year     = "2024",
-  note     = "R package version 0.0.9000",
+  note     = "R package version 0.2.0",
   url      = "https://katilingban.io/pakete/",
-  doi      = ""
+  doi      = "10.5281/zenodo.11040826"
 )
