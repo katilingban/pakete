@@ -8,7 +8,7 @@ message: 'To cite package "pakete" in publications use:'
 type: software
 license: GPL-3.0-or-later
 title: 'pakete: Utilities for Package Development'
-version: 0.2.1.9000
+version: 0.2.0
 abstract: Tools and utilities for package development currently not available from
   usual development tools. These are mostly linked to personal preferences during
   the development process. They assist in making routine and repetitive tasks easily
@@ -24,7 +24,7 @@ preferred-citation:
   authors:
   - name: Ernest Guevarra
   year: '2024'
-  notes: R package version 0.0.9000
+  notes: R package version 0.2.0
   url: https://katilingban.io/pakete/
 repository-code: https://github.com/katilingban/pakete
 url: https://katilingban.io/pakete/

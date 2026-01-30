@@ -20,9 +20,9 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/R-CMD-check.yaml)
 [![test-coverage](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/katilingban/pakete/actions/workflows/test-coverage.yaml)
-[![Codecov test coverage](https://codecov.io/gh/katilingban/pakete/branch/main/graph/badge.svg)](https://app.codecov.io/gh/katilingban/pakete?branch=main)
+[![Codecov test coverage](https://codecov.io/gh/katilingban/pakete/graph/badge.svg)](https://app.codecov.io/gh/katilingban/pakete)
 [![CodeFactor](https://www.codefactor.io/repository/github/katilingban/pakete/badge)](https://www.codefactor.io/repository/github/katilingban/pakete)
-[![DOI](https://zenodo.org/badge/790010725.svg)](https://zenodo.org/badge/latestdoi/790010725)
+[![DOI](https://zenodo.org/badge/790010725.svg)](https://doi.org/10.5281/zenodo.11040826)
 <!-- badges: end -->
 
 Tools and utilities for package development currently not available from usual development tools. These are mostly linked to the author's personal preferences during the package development process. They assist in making routine and repetitive tasks easily implementable.

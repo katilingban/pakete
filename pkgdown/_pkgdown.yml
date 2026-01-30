@@ -9,32 +9,50 @@ template:
   bootstrap: 5
   bootswatch: sandstone
   theme: breeze-light
-  ganalytics: "G-SK6XNBHBEC"
+  includes:
+    in_header: |
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK6XNBHBEC"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SK6XNBHBEC');
+      </script>
 
 navbar:
   bg: primary
-  type: light
+  type: dark
   structure:
     left:  [home, intro, reference, articles, news]
-    right: [search, mastodon, linkedin, github]
+    right: [search, website, mastodon, bluesky, linkedin, github]
 
   components:
     intro:
       text: "Why pakete?"
       href: articles/pakete.html
+    website:
+      icon: "fa-globe"
+      aria-label: Website
+      href: https://katilingban.io
     mastodon:
       icon: "fab fa-mastodon fa-lg"
       aria-label: Mastodon
       href: https://fosstodon.org/@katilingban
+    bluesky:
+      icon: "fab fa-bluesky fa-lg"
+      aria-label: Bluesky
+      href: https://bsky.app/profile/katilingban.io
     linkedin:
       icon: "fab fa-linkedin fa-lg"
       aria-label: LinkedIn
       href: https://www.linkedin.com/company/katilingban
 
-home:
-  links:
-  - text: Learn more about Katilingban
-    href: https://katilingban.io
+# home:
+#   links:
+#   - text: Learn more about Katilingban
+#     href: https://katilingban.io
 
 reference:
   - title: Badges and logo

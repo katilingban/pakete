@@ -1,11 +1,16 @@
 # Tests for add_contributing functions -----------------------------------------
 
-test_that("add_contributing works as expected", {
+test_that("overwrite = TRUE works as expected", {
   skip_on_ci()
-  
+
   dir.create(".github")
 
-  add_contributing(repo = "katilingban/pakete")
+  file.copy(
+    from = system.file("templates", "CONTRIBUTING.md", package = "pakete"),
+    to = ".github"
+  )
+
+  add_contributing(repo = "katilingban/pakete", overwrite = TRUE)
 
   expect_snapshot_file(
     path = ".github/CONTRIBUTING.md"#,
@@ -15,4 +20,3 @@ test_that("add_contributing works as expected", {
   file.remove(".github/CONTRIBUTING.md")
   unlink(".github", recursive = TRUE)
 })
-

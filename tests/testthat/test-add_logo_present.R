@@ -1,9 +1,11 @@
 # Tests for add_logo functions -------------------------------------------------
 
-test_that("add_logo works as expected", {
+test_that("add_logo with logo present works as expected", {
   skip_on_ci()
   
   create_readme_file()
+
+  add_logo(repo = "katilingban/pakete")
 
   add_logo(repo = "katilingban/pakete")
 
