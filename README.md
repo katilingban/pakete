@@ -39,8 +39,10 @@ Currently, `{pakete}` includes functions for:
 5.  adding [Zenodo](https://zenodo.org/) DOI badge; and,
 
 6.  adding specific GitHub Actions such as test deployment of package
-    website to [Netlify](https://www.netlify.com/) and mirroring of
-    repository to [Codeberg](https://codeberg.org/).
+    website to [Netlify](https://www.netlify.com/), mirroring of
+    repository to [Codeberg](https://codeberg.org/), and [R
+    Universe](https://ropensci.org/blog/2026/01/03/r-universe-workflows/)
+    testing.
 
 ## Installation
 
@@ -54,6 +56,15 @@ install.packages(
     'https://katilingban.r-universe.dev', 'https://cloud.r-project.org'
   )
 )
+```
+
+You can also install `{pakete}` from
+[GitHub](https://github.com/katilingban/pakete) using the `{pak}`
+package with:
+
+``` r
+if (!require("pak")) install.packages("pak")
+pak::pak("katilingban/pakete")
 ```
 
 ## Usage
@@ -149,7 +160,7 @@ relation to the Zenodo release URL.
 
 ## Citation
 
-If you find the `{pakete}` package useful please cite using the
+If you use the `{pakete}` package in your work, please cite using the
 suggested citation provided by a call to the `citation()` function as
 follows:
 
