@@ -3,8 +3,9 @@
 #' 
 #' @param gha_name Short name of GitHub Action to add. Currently supports
 #'   GitHub Action for Netlify deployment of testing version of pkgdown website
-#'   (*"netlify"*) and GitHub Action for mirroring to Codeberg
-#'   (*"mirror-codeberg"*).
+#'   (*"netlify"*), GitHub Action for mirroring to Codeberg
+#'   (*"mirror-codeberg"*), and GitHub Action for R-universe testing
+#'   (*"r-universe-test"*).
 #' @param overwrite Logical. Should an existing GitHub Action be overwritten?
 #'   Default is FALSE.
 #' @param repo Short remote git repository name. If NULL, is determined based
@@ -94,7 +95,8 @@ choose_gha_workflow <- function(gha_name) {
 
   workflows <- c(
     "netlify" = "Preview pkgdown website on pull request via Netlify",
-    "mirror-codeberg" = "Mirror repository to Codeberg" 
+    "mirror-codeberg" = "Mirror repository to Codeberg",
+    "r-universe-test" = "Test R-universe"
   )
   
   options <- paste0(cli::style_bold(names(workflows)), ": ", workflows)
