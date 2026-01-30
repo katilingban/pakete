@@ -41,19 +41,26 @@ Currently, `{pakete}` includes functions for:
 
 5. adding [Zenodo](https://zenodo.org/) DOI badge; and,
 
-6. adding specific GitHub Actions such as test deployment of package website to [Netlify](https://www.netlify.com/) and mirroring of repository to [Codeberg](https://codeberg.org/).
+6. adding specific GitHub Actions such as test deployment of package website to [Netlify](https://www.netlify.com/), mirroring of repository to [Codeberg](https://codeberg.org/), and [R Universe](https://ropensci.org/blog/2026/01/03/r-universe-workflows/) testing.
 
 ## Installation
 
 You can install `{pakete}` via the [Katilingban R Universe](https://katilingban.r-universe.dev) as follows:
 
-```{r install-r-universe, eval = FALSE}
+```R
 install.packages(
   "pakete",
   repos = c(
     'https://katilingban.r-universe.dev', 'https://cloud.r-project.org'
   )
 )
+```
+
+You can also install `{pakete}` from [GitHub](https://github.com/katilingban/pakete) using the `{pak}` package with:
+
+```R
+if (!require("pak")) install.packages("pak")
+pak::pak("katilingban/pakete")
 ```
 
 ## Usage
@@ -106,7 +113,7 @@ This will add a Zenodo badge to your README file in the block were badges are us
 
 ## Citation
 
-If you find the `{pakete}` package useful please cite using the suggested citation provided by a call to the `citation()` function as follows:
+If you use the `{pakete}` package in your work, please cite using the suggested citation provided by a call to the `citation()` function as follows:
 
 ```{r citation}
 citation("pakete")

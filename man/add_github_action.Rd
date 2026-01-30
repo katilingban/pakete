@@ -9,8 +9,9 @@ add_github_action(gha_name = NULL, repo = NULL, overwrite = FALSE)
 \arguments{
 \item{gha_name}{Short name of GitHub Action to add. Currently supports
 GitHub Action for Netlify deployment of testing version of pkgdown website
-(\emph{"netlify"}) and GitHub Action for mirroring to Codeberg
-(\emph{"mirror-codeberg"}).}
+(\emph{"netlify"}), GitHub Action for mirroring to Codeberg
+(\emph{"mirror-codeberg"}), and GitHub Action for R-universe testing
+(\emph{"r-universe-test"}).}
 
 \item{repo}{Short remote git repository name. If NULL, is determined based
 on current git settings. Evaluated only if \code{gha_name} is
