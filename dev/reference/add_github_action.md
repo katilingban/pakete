@@ -14,8 +14,9 @@ add_github_action(gha_name = NULL, repo = NULL, overwrite = FALSE)
 
   Short name of GitHub Action to add. Currently supports GitHub Action
   for Netlify deployment of testing version of pkgdown website
-  (*"netlify"*) and GitHub Action for mirroring to Codeberg
-  (*"mirror-codeberg"*).
+  (*"netlify"*), GitHub Action for mirroring to Codeberg
+  (*"mirror-codeberg"*), and GitHub Action for R-universe testing
+  (*"r-universe-test"*).
 
 - repo:
 
